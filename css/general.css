@@ -189,9 +189,15 @@ body {
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding: 2px;
+  transition: all 0.3s;
 }
 
 .link:hover,
 .link:active {
   color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.center-text {
+  text-align: center;
 }

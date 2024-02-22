@@ -188,6 +188,7 @@ strong {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
+  transition: all 0.3s;
 }
 
 .meal-content {
@@ -229,4 +230,9 @@ strong {
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
+}
+
+.meals:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
