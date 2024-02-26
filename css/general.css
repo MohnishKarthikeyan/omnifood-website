@@ -95,15 +95,18 @@ body {
   margin-right: 1.6rem !important;
 }
 
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
 .grid {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
-  margin-bottom: 9.6rem !important;
 }
 
-.grid:last-child {
-  margin-bottom: 0 !important;
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--center-v {
