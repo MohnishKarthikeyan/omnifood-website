@@ -10,7 +10,29 @@ btnNavEl.addEventListener("click", function () {
   btnHeadEl.classList.toggle("nav-open");
 });
 
-///////////////////////////////////////////////////////////
+//Smooth Scrolling Animation
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+    //scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    //scroll to other sections/links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+    //closing the mobile nav
+    if (link.classList.contains("main-nav-link"))
+      btnHeadEl.classList.toggle("nav-open");
+  });
+});
+
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
