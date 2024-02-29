@@ -94,11 +94,16 @@
             </div>
           </div>
           <div class="hero-imagebox">
-            <img
-              src="img/hero.png"
-              class="hero-image"
-              alt="hero-image-women-food"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/img" />
+
+              <img
+                src="img/hero-min.png"
+                class="hero-image"
+                alt="hero-image-women-food"
+              />
+            </picture>
           </div>
         </div>
       </section>
